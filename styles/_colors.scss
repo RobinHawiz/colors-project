@@ -20,6 +20,15 @@
     .controls {
       display: flex;
       flex-direction: column;
+
+      .adjust,
+      .lock {
+        font-size: 2rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin: 2rem 0rem;
+      }
     }
 
     .sliders {
@@ -28,12 +37,14 @@
       position: absolute;
       bottom: 0%;
       background: white;
+      opacity: 0;
       padding: 1rem;
       width: 80%;
       border-top-right-radius: 1rem;
       border-top-left-radius: 1rem;
       pointer-events: none;
       /* Adding an adjustment class */
+      transform: translateY(100px);
       transition: all 0.5s ease-in-out;
 
       button {
@@ -47,6 +58,7 @@
         background: rgb(73, 73, 73);
         color: white;
         cursor: pointer;
+        font-weight: bold;
       }
 
       .active {
@@ -55,5 +67,33 @@
         pointer-events: all;
       }
     }
+  }
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20vh;
+
+  .library-panel,
+  .generate-panel,
+  .save-panel {
+    text-align: center;
+  }
+
+  button {
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: rgb(31, 33, 63);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 }

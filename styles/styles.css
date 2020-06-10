@@ -65,6 +65,15 @@ svg {
           flex-direction: column;
 }
 
+.colors .color .controls .adjust,
+.colors .color .controls .lock {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 2rem 0rem;
+}
+
 .colors .color .sliders {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,12 +85,15 @@ svg {
   position: absolute;
   bottom: 0%;
   background: white;
+  opacity: 0;
   padding: 1rem;
   width: 80%;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
   pointer-events: none;
   /* Adding an adjustment class */
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -97,6 +109,7 @@ svg {
   background: #494949;
   color: white;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .colors .color .sliders .active {
@@ -104,5 +117,39 @@ svg {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   pointer-events: all;
+}
+
+.panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 20vh;
+}
+
+.panel .library-panel,
+.panel .generate-panel,
+.panel .save-panel {
+  text-align: center;
+}
+
+.panel button {
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: #1f213f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.panel p {
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=styles.css.map */
