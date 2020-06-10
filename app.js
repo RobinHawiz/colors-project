@@ -22,7 +22,19 @@ function randomColors() {
 
     //Change the h2 text to the appropriate color hex
     hexText.innerText = randomColor;
+
+    //Check for contrast
+    checkTextContrast(randomColor, hexText);
   });
+}
+
+function checkTextContrast(color, text) {
+  const luminance = chroma(color).luminance();
+  if (luminance > 0.5) {
+    text.style.color = "black";
+  } else {
+    text.style.color = "white";
+  }
 }
 
 randomColors();
